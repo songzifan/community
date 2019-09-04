@@ -10,9 +10,12 @@ bilibli
 [Bootstarp文档](https://v3.bootcss.com/getting-started)  
 [Github OAuth](https://developer.github.com/apps/building-oauth-apps/)  
 [OkHttp](https://square.github.io/okhttp/)
+[Thymeleaf](http://www.thymeleaf.org)
 
 ##工具
-[Visual Paradigm](https://www.visual-paradigm.com) 
+[Visual Paradigm](https://www.visual-paradigm.com)  
+[Flyway](https://flywaydb.org/getstarted/firststeps/maven)  
+[Lombok](https://www.projectlombok.org/)  
 
 ##图片
 ![Image text](https://github.com/yhmdemo/community/blob/master/image/github%20api%E6%B5%81%E7%A8%8B.png)  
@@ -28,7 +31,23 @@ create table USER
   GMT_CREATE BIGINT,
   GMT_MODIFIED BIGINT
 );
+create table question
+(
+	id int auto_increment primary key,
+	title varchar(50),
+	description text,
+	gmt_create bigint,
+	gmt_modified bigint,
+	creator int,
+	comment_count int default 0,
+	view_count int default 0,
+	like_count int default 0,
+	tag varchar(256)
+);
 ``` 
+```bash
+mvn flyway:migrate
+```
 
 
 
