@@ -16,7 +16,19 @@ bilibli
 
 ##图片
 ![Image text](https://github.com/yhmdemo/community/blob/master/image/github%20api%E6%B5%81%E7%A8%8B.png)  
- 
+
+##脚本
+```sql
+create table USER
+(
+  ID INTEGER auto_increment primary key,
+  ACCOUNT_ID VARCHAR(100),
+  NAME VARCHAR(50),
+  TOKEN CHAR(36),
+  GMT_CREATE BIGINT,
+  GMT_MODIFIED BIGINT
+);
+``` 
 
 
 
