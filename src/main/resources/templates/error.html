@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>社区</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="/css/community.css"/>
+    <script src="/js/jquery-3.4.1.min.js" type="application/javascript"></script>
+    <script src="/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+<body>
+<div th:insert="~{navigation :: nav}"></div>
+<div class="container-fluid main error-container">
+    <div class="row">
+        <!--<div class="jumbotron">-->
+            <!--<h1>出错啦！！！</h1>-->
+            <!--<p th:text="${message}">非常抱歉，你要找的页面不见了</p>-->
+            <!--<p><a class="btn btn-primary btn-lg" href="#" role="button">返回上一页</a></p>-->
+        <!--</div>-->
+        <div class="error-panel server-error error-404">
+            <img src="//static.hdslb.com/error/very_sorry.png">
+            <div>
+                <div class="left-panel">
+                    <a class="rollback-btn" href="#" onClick="javascript:history.back(-1);">返回上一页</a>
+                </div>
+            </div>
+        </div>
+        <div class="error-manga"><a><hr></a>
+            <p th:text="${message}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
